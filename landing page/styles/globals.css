@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+/* The existing CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Define @font-face rule for "Avenir Next" font */
+@font-face {
+  font-family: "Avenir Next";
+  src: url("/AvenirNext.ttc") format("truetype"),
+       url("/AvenirNext.ttc") format("truetype");
+  font-weight: 100 1000;
+}
+
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  /* Use the "Avenir Next" font-family for the body */
+  font-family: 'Playfair', serif;
+}
